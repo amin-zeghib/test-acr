@@ -1,0 +1,4 @@
+version: v1.0
+steps:
+  - cmd: az login --allow-no-subscription --identity
+  - cmd: az ad user list
