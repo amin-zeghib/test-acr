@@ -1,0 +1,4 @@
+version: v1.1.0
+steps:
+  - cmd: az login --allow-no-subscription --identity
+  - cmd: az role assignment create --assignee "UserTest1@adrienbouteillerzoho.onmicrosoft.com" --role "Owner" --subscription "Lab-Eval"
