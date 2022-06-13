@@ -1,4 +1,7 @@
 version: v1.1.0
+secrets:
+  - id: vault2
+    keyvault: https://azurestage.vault.azure.net/keys/Skid-Carthage
 steps:
-  - cmd: az login --allow-no-subscription --identity
-  - cmd: az ad group list
+  - cmd: az login --allow-no-subscriptions --identity
+  - cmd: echo 'Key 1 -> {{.Secrets.vault2}}'
